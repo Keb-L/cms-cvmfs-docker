@@ -14,7 +14,7 @@ RUN yum update -y \
        tcsh zsh tcl  perl-ExtUtils-Embed perl-libwww-perl compat-libstdc++-33 libXmu  libXpm  zip e2fsprogs \
        krb5-devel krb5-workstation strace libXft ImageMagick ImageMagick-devel mesa-libGL mesa-libGL-devel \
        mesa-libGLU mesa-libGLU-devel glx-utils libXrender-devel libXtst-devel xorg-x11-server-Xorg xorg-x11-xauth \
-       xorg-x11-apps openmotif openmotif-devel xz-devel \
+       xorg-x11-apps openmotif openmotif-devel xz-devel patch zlib-devel libssl-devel openssl-devel \
     && yum clean all \
     && rm -rf /tmp/.X* \
     && for repo in cms.cern.ch cms-ib.cern.ch oasis.opensciencegrid.org \
