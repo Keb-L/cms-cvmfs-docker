@@ -28,6 +28,9 @@ RUN yum update -y \
 #    && sed -i 's/1024/8192/' /etc/security/limits.d/90-nproc.conf
     && sed -i 's/4096/8192/' /etc/security/limits.d/20-nproc.conf
 
+# Change root password to cms-docker
+RUN echo 'root:cms-docker' | chpasswd
+
 WORKDIR /home/cmsuser
 ADD cvmfs/append_to_bashrc.sh .append_to_bashrc.sh
 RUN cat .append_to_bashrc.sh >> .bashrc
